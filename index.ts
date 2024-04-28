@@ -8,14 +8,14 @@ interface Todo {
   // Define the TodoList component
   const TodoList: React.FC<{ todos: Todo[] }> = ({ todos }) => {
     return (
-    //   <ul>
-    //     {todos.map(todo => (
-    //       <li key={todo.id}>
-    //         <input type="checkbox" checked={todo.completed} readOnly />
-    //         <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>{todo.text}</span>
-    //       </li>
-    //     ))}
-    //   </ul>
+      <ul>
+        {todos.map(todo => (
+          <li key={todo.id}>
+            <input type="checkbox" checked={todo.completed} readOnly />
+            <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>{todo.text}</span>
+          </li>
+        ))}
+      </ul>
     );
   };
   
