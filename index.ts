@@ -1,4 +1,5 @@
-// Define the Todo interface
+
+namespace React;// Define the Todo interface
 interface Todo {
     id: number;
     text: string;
@@ -9,7 +10,7 @@ interface Todo {
   const TodoList: React.FC<{ todos: Todo[] }> = ({ todos }) => {
     return (
       <ul>
-        {todos.map(todo => (
+        {todos.map((todo: any) => (
           <li key={todo.id}>
             <input type="checkbox" checked={todo.completed} readOnly />
             <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>{todo.text}</span>
